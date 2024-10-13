@@ -1,0 +1,111 @@
+uk:
+    'Location & Scale Accident':
+
+        - 'Easting':
+            input_type: float_input
+            allowed_values:
+                min: 0.0
+                max: 99.0
+
+        - 'Northing':
+            input_type: float_input
+            allowed_values:
+                min: 0.0
+                max: 99.0
+
+        - 'Road Class':
+            input_type: selectbox
+            allowed_values:
+                Carretera: 0
+                Camino: 1
+
+        - 'Number of Vehicles':
+            input_type: integer_input
+            allowed_values:
+                min: 0
+                max: 30
+
+
+    'Driving Limitations':
+
+        - 'Road Surface':
+            input_type: selectbox
+            allowed_values:
+                Mojado: 0
+                Seco: 1
+
+        - 'Speed Limit':
+            input_type: integer_input
+            allowed_values:
+                min: 0
+                max: 30
+
+
+    'Environmental':
+
+        - 'Weather Conditions':
+            input_type: selectbox
+            allowed_values:
+                Sol: 0
+                Lluvia: 1
+
+        - 'Lighting Conditions':
+            input_type: selectbox
+            allowed_values:
+                Oscuro: 0
+                Luces encdendidas: 1
+
+
+    'Temporary':
+
+        - 'Accident Day':
+            input_type: date_input
+            allowed_values: null
+
+
+        - 'Accident Hour':
+            input_type: time_input
+            allowed_values: null
+
+
+    'Vehicle':
+
+        - 'Type of Vehicle':
+            input_type: selectbox
+            allowed_values:
+                Moto: 0
+                Coche: 1
+
+        - 'First Point of Impact':
+            input_type: selectbox
+            allowed_values:
+                Frontal: 0
+                Lateral: 1
+
+        - 'Age of Vehicle':
+            input_type: integer_input
+            allowed_values:
+                min: 0
+                max: 30
+
+
+    'Victim':
+
+        - 'Casualty Class':
+            input_type: selectbox
+            allowed_values:
+                Conductor: 0
+                Peatón: 1
+
+        - 'Casualty Sex':
+            input_type: selectbox
+            allowed_values:
+                Hombre: 0
+                Mujer: 1
+
+        - 'Casualty Age':
+            input_type: integer_input
+            allowed_values:
+                min: 0
+                max: 99
+
