@@ -1,0 +1,177 @@
+'Driving Limitations':
+    elements_by_row: 2
+    features:
+        - 'Road Surface':
+            input_type: selectbox
+            allowed_values:
+                Mojado: 0
+                Seco: 1
+
+        - 'Speed Limit':
+            input_type: integer_input
+            allowed_values:
+                min: 0
+                max: 130
+
+
+'Environmental':
+    elements_by_row: 2
+    features:
+        - 'Weather Conditions':
+            input_type: selectbox
+            allowed_values:
+                'Despejado': 1
+                'Nublado': 2
+                'Lluvia débil': 3
+                'LLuvia intensa': 4
+                'Granizando':  5
+                'Nevando': 6
+            'Se desconoce': 7 
+        - 'Lighting Conditions':
+            input_type: selectbox
+            allowed_values:
+                'Despejado': 1
+                'Nublado': 2
+                'Lluvia débil': 3
+                'LLuvia intensa': 4
+                'Granizando':  5
+                'Nevando': 6
+                'Se desconoce': 7 
+
+
+'Temporary':
+    elements_by_row: 2
+    features:
+        - 'Accident Day':
+            input_type: date_input
+            allowed_values: null
+
+
+        - 'Accident Hour':
+            input_type: time_input
+            allowed_values: null
+
+
+'Vehicle':
+    elements_by_row: 2
+    features:
+        - 'Type of Vehicle':
+            input_type: selectbox
+            allowed_values:
+                'Bicicleta': 1
+                'Ciclo': 1
+                'Bicicleta EPAC (pedaleo asistido)': 1
+                'Ciclomotor': 2
+                'Ciclomotor de dos ruedas L1e-B': 2
+                'Ciclomotor de tres ruedas': 2
+                'Motocicleta hasta 125cc': 3
+                'Moto de tres ruedas hasta 125cc': 3
+                'Motocicleta > 125cc': 4
+                'Moto de tres ruedas > 125cc': 4
+                'Turismo': 5
+                'Todo terreno': 5
+                'Microbús <= 17 plazas': 5
+                'Autobús': 6
+                'Autobus EMT': 6
+                'Autobús articulado': 6
+                'Autobús articulado EMT': 6
+                'Maquinaria agrícola': 7
+                'Maquinaria de obras': 8
+                'Furgoneta': 9        # Menos de 3.5 toneladas.
+                'Ambulancia SAMUR': 10
+                'Autocaravana': 11,     # Entre 3.5 y 7.5 toneladas.
+                'Camión rígido': 12,    # Mayor que 7.5 toneladas.
+                'Tractocamión': 12
+                'Vehículo articulado': 12
+                'Camión de bomberos': 12
+                'VMU eléctrico': 13
+                'Patinete': 13
+                'Sin especificar': 14
+                'Otros vehículos sin motor': 14
+                'Remolque': 14
+                'Semiremolque': 14
+                'Otros vehículos con motor': 15
+                'Cuadriciclo ligero': 15
+                'Cuadriciclo no ligero': 15
+                'Motorcycle - Unknown CC': 15
+
+        - 'Point of Impact':
+            input_type: selectbox
+            allowed_values:
+                'Colisión fronto-lateral': 1
+                'Alcance': 2
+                'Colisión lateral': 3
+                'Choque contra obstáculo fijo': 4
+                'Colisión múltiple': 5
+                'Caída': 5
+                'Atropello a persona': 7
+                'Colisión frontal': 8
+                'Otro': 9
+                'Solo salida de la vía': 10
+                'Vuelco': 11
+                'Atropello a animal': 12
+                'Despeñamiento': 13
+
+        - 'Age of Vehicle':
+            input_type: integer_input
+            allowed_values:
+                min: 0
+                max: 30
+
+
+'Victim':
+    elements_by_row: 2
+    features:
+
+        - 'Class':
+            input_type: selectbox
+            allowed_values:
+                'Conductor': 1
+                'Pasajero': 2
+                'Peatón': 3
+        - 'Sex':
+            input_type: selectbox
+            allowed_values:
+                'Hombre': 1
+                'Mujer': 2
+                'Desconocido': 3
+
+        - 'Age':
+            input_type: integer_input
+            allowed_values:
+                min: 0
+                max: 99
+
+        - 'Alcohol/Drogas':
+            input_type: selectbox
+            allowed_values:
+                'Sí': 1
+                'No': 2
+
+'Location & Scale Accident':
+
+    elements_by_row: 2
+    features:
+        # - 'Easting':
+        #     input_type: float_input
+        #     allowed_values:
+        #         min: 0.0
+        #         max: 99.0
+
+        # - 'Northing':
+        #     input_type: float_input
+        #     allowed_values:
+        #         min: 0.0
+        #         max: 99.0
+
+        - 'Road Class':
+            input_type: selectbox
+            allowed_values:
+                Carretera: 0
+                Camino: 1
+
+        - 'Number of Vehicles':
+            input_type: integer_input
+            allowed_values:
+                min: 0
+                max: 30
